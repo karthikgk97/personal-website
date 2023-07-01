@@ -9,9 +9,10 @@ import Avatar from '@mui/material/Avatar';
 import personalPhoto from '../images/avatar_photo.png';
 
 // Icons
-import HomeIcon from '@mui/icons-material/Home';
 import SchoolTwoToneIcon from '@mui/icons-material/SchoolTwoTone';
+import WorkHistorySharpIcon from '@mui/icons-material/WorkHistorySharp';
 import ContactMailOutlinedIcon from '@mui/icons-material/ContactMailOutlined';
+import { red } from '@mui/material/colors';
 
 export default function TopBar() {
     return(
@@ -23,14 +24,23 @@ export default function TopBar() {
             </Tooltip>
           </Link>
           
-          <Stack direction="row" justifyContent="flex-end" spacing={1}>
-            <Link variant='body1' href="/Projects" underline="hover">
-              <Tooltip title="Projects">
-                <SchoolTwoToneIcon fontSize='large'/>
+          <Stack direction="row" justifyContent="flex-end" spacing={4}>
+            <Link variant='body1' href="/education" underline="hover">
+              <Tooltip title="Education">
+                <SchoolTwoToneIcon fontSize='large' style={{ backgroundColor: 'lightblue', borderRadius: '50%', padding: '2.5px',transition: 'background-color 0.3s',
+              "&:hover": {
+                color: "red",
+              } }}/>
               </Tooltip>
             </Link>
 
-            <Link href="/Contact" variant="body1"underline="none">
+            <Link variant='body1' href="/work-history" underline="hover">
+              <Tooltip title="Work History">
+                <WorkHistorySharpIcon fontSize='large'/>
+              </Tooltip>
+            </Link>
+
+            <Link href="/contact" variant="body1"underline="none">
               <Tooltip title="Contact">
                 <ContactMailOutlinedIcon fontSize='large'/>
               </Tooltip>
