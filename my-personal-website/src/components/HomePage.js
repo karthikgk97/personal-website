@@ -15,6 +15,7 @@ import BusinessRoundedIcon from '@mui/icons-material/BusinessRounded';
 import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 
 import profileImage from '../images/personal_photo.jpg';
+import { fontFamily } from '@mui/system';
 
 export default function HomePage() {
     return (
@@ -22,13 +23,13 @@ export default function HomePage() {
     <Box sx={{position: 'absolute', flex: '1', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', background:"rgb(255, 255, 255)"}}>
         <Stack direction="row" justifyContent="center" alignItems="center" spacing={1}>
             <div>
-                <Typography variant="h3" style={{ color: 'rgb(24, 24, 24)' }}> <b>Karthik Ganesan </b></Typography>
+                <Typography variant="h3" style={{ color: 'rgb(24, 24, 24)', fontFamily: 'Serif', marginLeft: 15}}> <b>Karthik Ganesan </b></Typography>
                 <ListItem alignItems="center">
                     <ListItemIcon sx={{ marginBottom: 1, marginRight: -2.5 }}>
                         <BadgeRoundedIcon />
                     </ListItemIcon>
                     <ListItemText
-                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)' }}> <b>Role</b>: Developer</Typography>}
+                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)' , fontFamily: 'monospace'}}> <b>Role</b>: Developer</Typography>}
                     />
                 </ListItem>
 
@@ -37,7 +38,7 @@ export default function HomePage() {
                         <BusinessRoundedIcon />
                     </ListItemIcon>
                     <ListItemText
-                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)' }}> <b>Company</b>: Tyson Foods</Typography>}
+                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>Company</b>: Tyson Foods</Typography>}
                     />
                 </ListItem>
 
@@ -46,7 +47,7 @@ export default function HomePage() {
                         <PinDropRoundedIcon />
                     </ListItemIcon>
                     <ListItemText
-                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)' }}> <b>Location</b>: Rogers, Arkansas</Typography>}
+                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>Location</b>: Rogers, Arkansas</Typography>}
                     />
                 </ListItem>
 
@@ -55,11 +56,11 @@ export default function HomePage() {
                         <InfoRoundedIcon />
                     </ListItemIcon>
                     <ListItemText
-                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)' }}> <b>About</b>: Motivated, Cross-functional Software Engineer</Typography>}
+                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>About</b>: Motivated, Cross-functional Software Engineer</Typography>}
                     />
                 </ListItem>
             </div>
-            <img src={profileImage} alt="Profile" style={{ width: '50%', height: '50%', justifyContent: 'flex-end', borderRadius: '10%'}} />
+            <img src={profileImage} alt="Profile" style={{ width: '30%', height: '30%', justifyContent: 'flex-end', borderRadius: '10%'}} />
          </Stack>
       </Box>     
       </>
