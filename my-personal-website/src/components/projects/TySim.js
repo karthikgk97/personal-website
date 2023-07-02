@@ -1,6 +1,9 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
+
 import BuildCircleRoundedIcon from '@mui/icons-material/BuildCircleRounded';
+import ContentPasteRoundedIcon from '@mui/icons-material/ContentPasteRounded';
+import ListRoundedIcon from '@mui/icons-material/ListRounded';
 
 import TySimScene from '../../images/tysim_simulated_scene.png'
 import TySimBBox from '../../images/tysim_with_bbox.png';
@@ -17,11 +20,21 @@ export default function TySimContents() {
                 <BuildCircleRoundedIcon style={{borderRadius: '50%'}}/>
                 <b> Tools Used </b>: AWS, Python, Blender, Docker, GitLab CI, ML using MxNET, TensorFlow and PyTorch. 
             </Typography>
-
-            <Typography variant="body1" style={{fontFamily: 'Monospace'}}>
-                <b> Context: </b><br></br>
+            <br></br>
+            <Typography variant="body1" style={{display: 'flex', fontFamily: 'Monospace'}}>
+                <ContentPasteRoundedIcon style={{borderRadius: '50%'}}/>
+                <b> Context: </b> 
                 Project TySim was Tyson Foods' first attempt at generating synthetic images of chicken nuggets and training a model using them. The project was initiated due to the challenges faced in collecting real-world images of chicken nuggets, which often suffered from frequent fogging of the camera lens. Furthermore, annotating these images proved to be a strenuous task. <br></br>
+            </Typography> 
+
+            <br></br>    
+            
+            <Typography variant="body1" style={{display: 'flex', fontFamily: 'Monospace'}}>
+                <ListRoundedIcon style={{borderRadius: '50%'}}/>
                 <b> Approach Taken: </b> 
+            </Typography>
+
+            <Typography variant='body1' style={{fontFamily: 'Monospace'}}>
                 <ul>
                     <li> <b>Image Generation:</b> The project commenced by leveraging Blender's Python API to generate synthetic images. A meticulously crafted 3D model served as the foundation, while Physically Based Rendering (PBR) materials were created using the versatile software, Materialize. </li>
                     <li> <b>Deployment on AWS:</b> The generated image generation code was dockerized and seamlessly deployed to AWS ECR (Elastic Container Registry) through GitLab CI (Continuous Integration). This streamlined the process and facilitated further automation.</li>
