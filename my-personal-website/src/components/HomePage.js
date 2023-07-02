@@ -59,6 +59,15 @@ export default function HomePage() {
                         primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>About</b>: Motivated, Cross-functional Software Engineer</Typography>}
                     />
                 </ListItem>
+
+                <ListItem >
+                    <ListItemIcon sx={{ marginBottom: 1, marginRight: -2.5 }}>
+                        <InfoRoundedIcon />
+                    </ListItemIcon>
+                    <ListItemText
+                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>Key Skills</b>: Python, AWS, GCP, Robotics</Typography>}
+                    />
+                </ListItem>
             </div>
             <img src={profileImage} alt="Profile" style={{ width: '30%', height: '30%', justifyContent: 'flex-end', borderRadius: '10%'}} />
          </Stack>

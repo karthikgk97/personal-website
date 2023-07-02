@@ -15,6 +15,7 @@ import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 import WorkHistoryRoundedIcon from '@mui/icons-material/WorkHistoryRounded';
 import ContactMailRoundedIcon from '@mui/icons-material/ContactMailRounded';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import EngineeringRoundedIcon from '@mui/icons-material/EngineeringRounded';
 
 export default function TopBar() {
     return(
@@ -29,17 +30,17 @@ export default function TopBar() {
           </Link>
           
           <Stack direction="row" justifyContent="flex-end" spacing={2}>
+            <Link variant='body1' to="/qualifications" underline="hover">
+                <Tooltip title="Qualifications">
+                  <SchoolRoundedIcon fontSize='large' hoverColor="red" style={{ backgroundColor: 'rgb(200, 200, 200)', borderRadius: '50%', padding: '2.5px'}} 
+                  sx={{ "&:hover": { color: "rgb(75, 75, 75)" } }}/>
+                </Tooltip>
+            </Link>
+
             <Link variant='body1' to="/work-history" underline="hover">
               <Tooltip title="Work History">
                 <WorkHistoryRoundedIcon fontSize='large' style={{ backgroundColor: 'rgb(200, 200, 200)', borderRadius: '50%', padding: '2.5px'}}
                 sx={{ "&:hover": {color: "rgb(75, 75, 75)"} }}/>
-              </Tooltip>
-            </Link>
-
-            <Link variant='body1' to="/education" underline="hover">
-              <Tooltip title="Education">
-                <SchoolRoundedIcon fontSize='large' hoverColor="red" style={{ backgroundColor: 'rgb(200, 200, 200)', borderRadius: '50%', padding: '2.5px'}} 
-                sx={{ "&:hover": { color: "rgb(75, 75, 75)" } }}/>
               </Tooltip>
             </Link>
 
