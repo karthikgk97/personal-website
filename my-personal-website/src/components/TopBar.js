@@ -29,17 +29,17 @@ export default function TopBar() {
           </Link>
           
           <Stack direction="row" justifyContent="flex-end" spacing={2}>
-            <Link variant='body1' to="/education" underline="hover">
-              <Tooltip title="Education">
-                <SchoolRoundedIcon fontSize='large' hoverColor="red" style={{ backgroundColor: 'rgb(200, 200, 200)', borderRadius: '50%', padding: '2.5px'}} 
-                sx={{ "&:hover": { color: "rgb(75, 75, 75)" } }}/>
-              </Tooltip>
-            </Link>
-
             <Link variant='body1' to="/work-history" underline="hover">
               <Tooltip title="Work History">
                 <WorkHistoryRoundedIcon fontSize='large' style={{ backgroundColor: 'rgb(200, 200, 200)', borderRadius: '50%', padding: '2.5px'}}
                 sx={{ "&:hover": {color: "rgb(75, 75, 75)"} }}/>
+              </Tooltip>
+            </Link>
+
+            <Link variant='body1' to="/education" underline="hover">
+              <Tooltip title="Education">
+                <SchoolRoundedIcon fontSize='large' hoverColor="red" style={{ backgroundColor: 'rgb(200, 200, 200)', borderRadius: '50%', padding: '2.5px'}} 
+                sx={{ "&:hover": { color: "rgb(75, 75, 75)" } }}/>
               </Tooltip>
             </Link>
 

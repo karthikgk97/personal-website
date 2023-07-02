@@ -1,7 +1,7 @@
 import * as React from 'react';
 import TopBar from './components/TopBar';
 import HomePage from './components/HomePage';
-import TysonPage from './components/TysonPage';
+import EducationPage from './components/EducationPage';
 
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -15,16 +15,12 @@ export default function MyApp() {
       <Router>
       <TopBar />
       <Routes>
-        {/* <Route exact path="/education" component={TopBar} /> */}
         <Route path="/" element={<HomePage />} />
       </Routes>
-    {/* </Router> */}
 
-      {/* <Router> */}
       
       <Routes>
-        {/* <Route exact path="/education" component={TopBar} /> */}
-        <Route path="/education" element={<TysonPage />} />
+        <Route path="/education" element={<EducationPage />} />
       </Routes>
     </Router>
     </div>

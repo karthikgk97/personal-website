@@ -23,7 +23,7 @@ export default function HomePage() {
     <Box sx={{position: 'absolute', flex: '1', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', background:"rgb(255, 255, 255)"}}>
         <Stack direction="row" justifyContent="center" alignItems="center" spacing={1}>
             <div>
-                <Typography variant="h3" style={{ color: 'rgb(24, 24, 24)', fontFamily: 'Serif', marginLeft: 15}}> <b>Karthik Ganesan </b></Typography>
+                <Typography variant="h3" style={{ color: 'rgb(24, 24, 24)', fontFamily: 'Monospace', marginLeft: 15}}> <b>Karthik Ganesan </b></Typography>
                 <ListItem alignItems="center">
                     <ListItemIcon sx={{ marginBottom: 1, marginRight: -2.5 }}>
                         <BadgeRoundedIcon />
