@@ -9,10 +9,14 @@ import CardContent from "@mui/material/CardContent";
 
 import TySimContents from './projects/TySim';
 import GripRLContents from './projects/GripRL';
+import GoChartContents from './projects/GoChart';
 
 
 import KeyboardArrowDownIcon from 
     "@mui/icons-material/KeyboardArrowDown";
+
+// import ExpandCircleDownRoundedIcon from '@mui/icons-material/ExpandCircleDownRounded';
+import ExpandCircleDownOutlinedIcon from '@mui/icons-material/ExpandCircleDownOutlined';
 import KeyboardArrowUpIcon from 
     "@mui/icons-material/KeyboardArrowUp";
 import IconButton from "@mui/material/IconButton";
@@ -20,10 +24,12 @@ import Avatar from '@mui/material/Avatar';
 
 import tyson_logo from '../images/tyson_logo.png';
 import duke_univ_logo from '../images/duke_univ_logo.png';
+import asu_logo from '../images/asu_logo.png';
 
 export default function WorkPage() {
     const [tysimOpen, setTySimOpen] = React.useState(false);
     const [gripRLOpen, setGripRLOpen] = React.useState(false);
+    const [goChartOpen, setGoChartOpen] = React.useState(false);
     return (
         <>
         <Stack direction="column" justifyContent="flex-start" alignItems="stretch" spacing={2}>
@@ -45,12 +51,16 @@ export default function WorkPage() {
                                 : <KeyboardArrowDownIcon />}
                         </IconButton>
                     }
+                    // sx={{background: 'linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,32,91,1) 100%)' }}
             >
             </CardHeader>
             </div>
             <>
                 <Collapse in={tysimOpen} unmountOnExit>
-                    <CardContent>
+                    <CardContent 
+                    // sx={{background: 'linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,32,91,1) 100%)' }}
+                    >
+                    {/* <CardContent> */}
                         <TySimContents />
                     </CardContent>
                 </Collapse>
@@ -74,19 +84,58 @@ export default function WorkPage() {
                                 : <KeyboardArrowDownIcon />}
                         </IconButton>
                     }
+                    sx={{background: 'linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,32,91,1) 100%)' }}
             >
             </CardHeader>
             </div>
             <>
                 <Collapse in={gripRLOpen} unmountOnExit>
-                    <CardContent>
+                    <CardContent 
+                    // sx={{background: 'linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,32,91,1) 100%)' }}
+                    >
                         <GripRLContents />
                     </CardContent>
                 </Collapse>
             </>
-            
         </Card>  
-        </div>    
+        </div>   
+
+        {/* Go Chart Contents */}
+
+        {/* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',marginTop: '-1px'}}>            */}
+        <Card sx={{background: 'linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,200,0,1) 35%, rgba(167,4,56,1) 100%)'}} >
+            {/* <div onClick={() => setGoChartOpen(!goChartOpen)} style={{ cursor: 'pointer', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center'}}> */}
+            <div onClick={() => setGoChartOpen(!goChartOpen)} style={{ cursor: 'pointer'}}>
+            <CardHeader
+                    title= "Project Go-CHART"
+                    avatar = {<Avatar alt="Tyson Foods" variant="circular" sizes="large" src={asu_logo}/>}
+                    action={ 
+                        <IconButton
+                            onClick={() => setGoChartOpen(!goChartOpen)}
+                            aria-label="expand"
+                            size="large"
+                        >
+                            {goChartOpen ? <KeyboardArrowUpIcon />
+                                : <KeyboardArrowDownIcon />}
+                        </IconButton>
+                    }
+                    
+                    
+            >
+            </CardHeader>
+            </div>
+            <>
+                <Collapse in={goChartOpen} unmountOnExit>
+                    <CardContent 
+                    // sx={{background: 'linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,32,91,1) 100%)' }}
+                    >
+                        <GoChartContents />
+                    </CardContent>
+                </Collapse>
+            </>
+        </Card>  
+        {/* </div>   */}
+
         </Stack>
         </>
     );

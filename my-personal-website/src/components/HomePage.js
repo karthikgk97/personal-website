@@ -13,6 +13,7 @@ import PinDropRoundedIcon from '@mui/icons-material/PinDropRounded';
 import BadgeRoundedIcon from '@mui/icons-material/BadgeRounded';
 import BusinessRoundedIcon from '@mui/icons-material/BusinessRounded';
 import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
+import ManageSearchRoundedIcon from '@mui/icons-material/ManageSearchRounded';
 
 import profileImage from '../images/personal_photo.jpg';
 import { fontFamily } from '@mui/system';
@@ -29,7 +30,7 @@ export default function HomePage() {
                         <BadgeRoundedIcon />
                     </ListItemIcon>
                     <ListItemText
-                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)' , fontFamily: 'monospace'}}> <b>Role</b>: Developer</Typography>}
+                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)' , fontFamily: 'monospace'}}> <b>Role</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Developer</Typography>}
                     />
                 </ListItem>
 
@@ -38,7 +39,7 @@ export default function HomePage() {
                         <BusinessRoundedIcon />
                     </ListItemIcon>
                     <ListItemText
-                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>Company</b>: Tyson Foods</Typography>}
+                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>Company</b>&nbsp;&nbsp;&nbsp;&nbsp;: Tyson Foods</Typography>}
                     />
                 </ListItem>
 
@@ -47,7 +48,7 @@ export default function HomePage() {
                         <PinDropRoundedIcon />
                     </ListItemIcon>
                     <ListItemText
-                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>Location</b>: Rogers, Arkansas</Typography>}
+                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>Location</b>&nbsp;&nbsp;&nbsp;: Rogers, Arkansas</Typography>}
                     />
                 </ListItem>
 
@@ -56,16 +57,16 @@ export default function HomePage() {
                         <InfoRoundedIcon />
                     </ListItemIcon>
                     <ListItemText
-                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>About</b>: Motivated, Cross-functional Software Engineer</Typography>}
+                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>About</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Motivated, Cross-functional Software Engineer</Typography>}
                     />
                 </ListItem>
 
                 <ListItem >
                     <ListItemIcon sx={{ marginBottom: 1, marginRight: -2.5 }}>
-                        <InfoRoundedIcon />
+                        <ManageSearchRoundedIcon />
                     </ListItemIcon>
                     <ListItemText
-                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>Key Skills</b>: Python, AWS, GCP, Robotics</Typography>}
+                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>Key Skills</b>&nbsp;: Python, AWS, GCP, Robotics</Typography>}
                     />
                 </ListItem>
             </div>
