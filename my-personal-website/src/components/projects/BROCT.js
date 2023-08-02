@@ -21,7 +21,7 @@ export default function BROCTContents() {
             <Typography variant="body1" style={{display: 'flex', fontFamily: 'Monospace'}}>
                 <ContentPasteRoundedIcon style={{borderRadius: '50%'}}/>
                 <b> Context: </b> 
-                Project BROCT at Duke University involved the development and optimization of an Optical Coherence Tomography (OCT) application used by clinicians. As a member of the project, your primary responsibility was to enhance the application's performance, optimize its functionality, and address any existing bugs. <br></br>
+                Project BROCT at Duke University involved the development and optimization of an Optical Coherence Tomography (OCT) application used by clinicians. As a member of the project, my primary responsibility was to enhance the application's performance, optimize its functionality, and address any existing bugs. <br></br>
             </Typography> 
 
             <br></br>    
