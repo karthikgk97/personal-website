@@ -9,6 +9,7 @@ import Avatar from '@mui/material/Avatar';
 import personalPhoto from '../images/avatar_photo.png';
 
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 // Icons
 import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
@@ -17,39 +18,37 @@ import ContactMailRoundedIcon from '@mui/icons-material/ContactMailRounded';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import EngineeringRoundedIcon from '@mui/icons-material/EngineeringRounded';
 
+
 export default function TopBar() {
+    
     return(
       <div className='top-bar'>
         <Stack direction="row" justifyContent="space-between" spacing={1}>
-          <Link to="/" variant="body1" underline="none">
+          <NavLink exact to="/" className="nav-link" variant="body1" underline="none">
             <Tooltip title="Home">
               {/* <Avatar alt="Karthik Ganesan" variant="circular" sizes="medium" src={personalPhoto} /> */}
-              <HomeRoundedIcon fontSize='large' hoverColor="red" style={{ backgroundColor: 'rgb(200, 200, 200)', borderRadius: '50%', padding: '2.5px'}} 
-                sx={{ "&:hover": { color: "rgb(75, 75, 75)" } }}/>
+              <HomeRoundedIcon fontSize='large' style={{ backgroundColor: 'rgb(200, 200, 200)', borderRadius: '50%', padding: '2.5px'}} />
             </Tooltip>
-          </Link>
+          </NavLink>
           
           <Stack direction="row" justifyContent="flex-end" spacing={2}>
-            <Link variant='body1' to="/qualifications" underline="hover">
+            <NavLink exact to="/qualifications" activeClassName="active-link" className="nav-link" variant="body1" underline="none">
                 <Tooltip title="Qualifications">
-                  <SchoolRoundedIcon fontSize='large' hoverColor="red" style={{ backgroundColor: 'rgb(200, 200, 200)', borderRadius: '50%', padding: '2.5px'}} 
-                  sx={{ "&:hover": { color: "rgb(75, 75, 75)" } }}/>
+                  <SchoolRoundedIcon fontSize='large' style={{ backgroundColor: 'rgb(200, 200, 200)', borderRadius: '50%', padding: '2.5px'}} />
                 </Tooltip>
-            </Link>
+            </NavLink>
 
-            <Link variant='body1' to="/work-history" underline="hover">
+            <NavLink exact to="/work-history" activeClassName="active-link" className="nav-link" variant="body1" underline="none">
               <Tooltip title="Work History">
-                <WorkHistoryRoundedIcon fontSize='large' style={{ backgroundColor: 'rgb(200, 200, 200)', borderRadius: '50%', padding: '2.5px'}}
-                sx={{ "&:hover": {color: "rgb(75, 75, 75)"} }}/>
+                <WorkHistoryRoundedIcon fontSize='large' style={{ backgroundColor: 'rgb(200, 200, 200)', borderRadius: '50%', padding: '2.5px'}}/>
               </Tooltip>
-            </Link>
+              </NavLink>
 
-            <Link to="/contact" variant="body1" underline="none">
+            <NavLink exact to="/contact" activeClassName="active-link" className="nav-link" variant="body1" underline="none">
               <Tooltip title="Contact">
-                <ContactMailRoundedIcon fontSize='large' style={{ backgroundColor: 'rgb(200, 200, 200)', borderRadius: '50%', padding: '2.5px' }}
-                sx={{ "&:hover": { color: "rgb(75, 75, 75)", backgroundColor: "blue" } }}/>
+                <ContactMailRoundedIcon fontSize='large' style={{ backgroundColor: 'rgb(200, 200, 200)', borderRadius: '50%', padding: '2.5px' }}/>
               </Tooltip>
-            </Link>
+              </NavLink>
 
           </Stack>
         </Stack>

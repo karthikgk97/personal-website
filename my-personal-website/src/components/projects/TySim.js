@@ -40,9 +40,10 @@ export default function TySimContents() {
                     <li> <b>Deployment on AWS:</b> The generated image generation code was dockerized and seamlessly deployed to AWS ECR (Elastic Container Registry) through GitLab CI (Continuous Integration). This streamlined the process and facilitated further automation.</li>
                     <li> <b>Cloud Pipeline:</b> Leveraging the power of AWS services, a cloud pipeline was established. AWS Lambda effectively triggered an AWS Batch job, incorporating the ECR image. The resulting output images were efficiently stored in AWS S3. </li>
                     <li> <b>Transfer Learning and Model Training:</b> With the synthetic dataset in hand, the team undertook transfer learning to train an object detection model. The achieved accuracy across all classes, distinguishing between good and defective nuggets, reached approximately 70%. This outperformed the model trained solely on real-world images, which exhibited an accuracy of around 40%. </li>
-                    <li> <b>Framework and Training:</b> AWS Sagemaker proved to be an invaluable tool for training the models. The team employed three distinct frameworks, namely MxNET, TensorFlow, and PyTorch, to train separate models. Sagemaker's distributed training capabilities, specifically harnessed in PyTorch, reduced the overall training time by 50%.</li>
+                    <li> <b>Framework and Training:</b> AWS Sagemaker played a crucial role in training the models. The team utilized three different frameworks - MxNET, TensorFlow, and PyTorch - to train separate models. Leveraging Sagemaker's distributed training capabilities, particularly in PyTorch, resulted in a 50% reduction in overall training time.</li>
+                    
                 </ul>
-                <div style={{display: 'flex'}}>
+                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                     <figure style={{ textAlign: 'center' }}>
                         <img src={TySimScene} alt="Tysim Scene" style={{ display: 'block', margin: '0 auto', width: '800px', height: '500px' }} />
                         <figcaption style={{ marginTop: '10px' }}>Synthetically Generated Sample Image</figcaption>

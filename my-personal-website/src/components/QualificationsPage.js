@@ -12,12 +12,13 @@ import AccountBoxRoundedIcon from '@mui/icons-material/AccountBoxRounded';
 import LocationCityRoundedIcon from '@mui/icons-material/LocationCityRounded';
 import GradingRoundedIcon from '@mui/icons-material/GradingRounded';
 import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
+import AutoStoriesRoundedIcon from '@mui/icons-material/AutoStoriesRounded';
 
 import asu_logo from '../images/asu_logo.png';
 import anna_univ_logo from '../images/anna_university_logo.png';
 import tyson_logo from '../images/tyson_logo.png';
 import duke_univ_logo from '../images/duke_univ_logo.png';
-
+import {FaUserGraduate} from 'react-icons/fa';
 export default function QualificationsPage() {
     return (
         <>
@@ -135,6 +136,7 @@ export default function QualificationsPage() {
                 </Typography>
 
                 <Typography variant="body1" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', fontFamily: 'Monospace', marginLeft: 56}}> 
+                    {/* <FaUserGraduate />&nbsp; */}
                     <SchoolRoundedIcon />
                     <b>Degree</b>
                     &nbsp;&nbsp;&nbsp;:
@@ -170,6 +172,7 @@ export default function QualificationsPage() {
 
                 <Typography variant="body1" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', fontFamily: 'Monospace', marginLeft: 56}}> 
                     <SchoolRoundedIcon />
+                    {/* <FaUserGraduate />&nbsp; */}
                     <b>Degree</b>
                     &nbsp;&nbsp;&nbsp;:
                     Bachelors in Aeronautical Engineering

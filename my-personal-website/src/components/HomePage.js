@@ -21,8 +21,9 @@ import { fontFamily } from '@mui/system';
 export default function HomePage() {
     return (
     <>
-    <Box sx={{position: 'absolute', flex: '1', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', background:"rgb(255, 255, 255)"}}>
-        <Stack direction="row" justifyContent="center" alignItems="center" spacing={1}>
+    {/* <Box sx={{position: 'absolute', flex: '1', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', background:"rgb(255, 255, 255)"}}> */}
+    
+        <Stack direction="row" justifyContent="center" alignItems="center" spacing={1} sx={{position: 'absolute', flex: '1', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}}>
             <div>
                 <Typography variant="h3" style={{ color: 'rgb(24, 24, 24)', fontFamily: 'Monospace', marginLeft: 15}}> <b>Karthik Ganesan </b></Typography>
                 <ListItem alignItems="center">
@@ -70,9 +71,9 @@ export default function HomePage() {
                     />
                 </ListItem>
             </div>
-            <img src={profileImage} alt="Profile" style={{ width: '30%', height: '30%', justifyContent: 'flex-end', borderRadius: '10%'}} />
+            <img src={profileImage} alt="Profile" style={{ width: '20%', height: '20%', justifyContent: 'flex-end', borderRadius: '10%'}} />
          </Stack>
-      </Box>     
+      {/* </Box>      */}
       </>
     );
   }
