@@ -8,7 +8,6 @@ import Tooltip from '@mui/material/Tooltip';
 import Avatar from '@mui/material/Avatar';
 import personalPhoto from '../images/avatar_photo.png';
 
-import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
 // Icons

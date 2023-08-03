@@ -30,10 +30,11 @@ export default function HomePage() {
     <>
     {/* <TracerouteComponent /> */}
     {/* , top: '50%', left: '50%', transform: 'translate(-50%, -50%)' */}
-        <Stack direction={isPC ? 'row' : 'row'} justifyContent="center" alignItems="center" spacing={1} sx={{position: 'absolute', flex: '1'}}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <Stack direction={isPC ? 'row' : 'row'} justifyContent="center" alignItems="center" spacing={1}>
             <div>
             {/* <div style={{ marginBottom: isPC ? 0 : '20px', textAlign: isPC ? 'left' : 'center' }}> */}
-                <Typography variant="h3" style={{ color: 'rgb(24, 24, 24)', fontFamily: 'Monospace', marginLeft: '15%', marginTop: '10%'}}> <b>Karthik Ganesan </b></Typography>
+                <Typography variant="h2" style={{ color: 'rgb(24, 24, 24)', fontFamily: 'Monospace', marginLeft: '5%', marginTop: '0%', marginBottom: '5%'}}> <b>Karthik Ganesan </b></Typography>
                 <ListItem alignItems="center">
                     <ListItemIcon sx={{ marginBottom: '2%', marginRight: '-2.5%' }}>
                         <BadgeRoundedIcon />
@@ -81,6 +82,7 @@ export default function HomePage() {
             </div>
             <img src={profileImage} alt="Profile" style={{maxWidth: '100%',  width: '20%', height: '20%', justifyContent: 'flex-end', borderRadius: '10%'}} />
         </Stack>
+    </div>
     </>
     );
   }

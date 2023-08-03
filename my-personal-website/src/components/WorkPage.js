@@ -8,6 +8,7 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 
+import LinquaContents from './projects/Linqua';
 import TySimContents from './projects/TySim';
 import GripRLContents from './projects/GripRL';
 import BROCTContents from './projects/BROCT';
@@ -29,17 +30,52 @@ import duke_univ_logo from '../images/duke_univ_logo.png';
 import asu_logo from '../images/asu_logo.png';
 
 export default function WorkPage() {
+    const [linquaOpen, setLinquaOpen] = React.useState(false);
     const [tysimOpen, setTySimOpen] = React.useState(false);
     const [gripRLOpen, setGripRLOpen] = React.useState(false);
     const [broctOpen, setBroctOpen] = React.useState(false);
     const [goChartOpen, setGoChartOpen] = React.useState(false);
+
     return (
         <>
         <Stack direction="column" justifyContent="flex-start" alignItems="stretch" spacing={2}>
         <Typography variant="h2" style={{ color: 'rgb(24, 24, 24)', fontFamily: 'Monospace', textAlign: 'center'}}>  <b>Work History</b> </Typography>
         
+        <Card sx={{ borderRadius: 0 }}>
+            <div onClick={() => setLinquaOpen(!linquaOpen)} style={{ cursor: 'pointer'}}>
+            <CardHeader
+                    title= {<Typography variant="h5" style={{display: 'flex', fontFamily: 'Monospace'}}> <b>Project Linqua</b> </Typography>}
+                    avatar = {<Avatar alt="Tyson Foods" variant="circular" sizes="large" src={tyson_logo}/>}
+                    action={ 
+                        <IconButton
+                            onClick={() => setLinquaOpen(!linquaOpen)}
+                            aria-label="expand"
+                            size="large"
+                        >
+                            {linquaOpen ? <KeyboardArrowUpIcon />
+                                : <KeyboardArrowDownIcon />}
+                        </IconButton>
+                    }
+                    sx={{background: 'linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,32,91,1) 100%)' }}
+            >
+            </CardHeader>
+            </div>
+            <>
+                <Collapse in={linquaOpen} unmountOnExit>
+                    <CardContent 
+                    sx={{background: 'linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,32,91,1) 100%)' }}
+                    >
+                    {/* <CardContent> */}
+                        <LinquaContents />
+                    </CardContent>
+                </Collapse>
+            </>
+        </Card>  
+
+
+
         {/* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>  */}
-        <Card>
+        <Card sx={{ borderRadius: 0 }} style={{marginTop: '-1px'}}>
             {/* <div onClick={() => setTySimOpen(!tysimOpen)} style={{ cursor: 'pointer', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center'}}> */}
             <div onClick={() => setTySimOpen(!tysimOpen)} style={{ cursor: 'pointer'}}>
             <CardHeader
@@ -76,7 +112,7 @@ export default function WorkPage() {
 
 
         {/* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>            */}
-        <Card style={{marginTop: '-1px'}}>
+        <Card sx={{ borderRadius: 0 }} style={{marginTop: '-1px'}}>
             {/* <div onClick={() => setGripRLOpen(!gripRLOpen)} style={{ cursor: 'pointer', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center'}}> */}
             <div onClick={() => setGripRLOpen(!gripRLOpen)} style={{ cursor: 'pointer'}}>
             <CardHeader
@@ -112,7 +148,7 @@ export default function WorkPage() {
 
         {/* Duke Contents */}
 
-        <Card style={{marginTop: '-1px'}}  >
+        <Card sx={{ borderRadius: 0 }} style={{marginTop: '-1px'}}  >
             <div onClick={() => setBroctOpen(!broctOpen)} style={{ cursor: 'pointer'}}>
             <CardHeader
                     title= {<Typography variant="h5" style={{display: 'flex', fontFamily: 'Monospace'}}> <b>Project BROCT</b> </Typography>}
@@ -145,7 +181,7 @@ export default function WorkPage() {
         {/* Go Chart Contents */}
 
         {/* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',marginTop: '-1px'}}>            */}
-        <Card style={{marginTop: '-1px'}}  >
+        <Card sx={{ borderRadius: 0 }} style={{marginTop: '-1px'}}  >
             {/* <div onClick={() => setGoChartOpen(!goChartOpen)} style={{ cursor: 'pointer', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center'}}> */}
             <div onClick={() => setGoChartOpen(!goChartOpen)} style={{ cursor: 'pointer'}}>
             <CardHeader
