@@ -7,10 +7,13 @@ import ListRoundedIcon from '@mui/icons-material/ListRounded';
 
 import TySimScene from '../../images/tysim_simulated_scene.png'
 import TySimBBox from '../../images/tysim_with_bbox.png';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export default function TySimContents() {
+    const isPC = useMediaQuery('(min-width:500px)')
 
     return(
+
         <>
             <Typography variant="h3" style={{ color: 'rgb(24, 24, 24)', fontFamily: 'Monospace', textAlign: 'center'}}>  
                 <b>Synthetic Data Generation</b> 
@@ -43,16 +46,24 @@ export default function TySimContents() {
                     <li> <b>Framework and Training:</b> AWS Sagemaker played a crucial role in training the models. The team utilized three different frameworks - MxNET, TensorFlow, and PyTorch - to train separate models. Leveraging Sagemaker's distributed training capabilities, particularly in PyTorch, resulted in a 50% reduction in overall training time.</li>
                     
                 </ul>
-                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                    <figure style={{ textAlign: 'center' }}>
-                        <img src={TySimScene} alt="Tysim Scene" style={{ display: 'block', margin: '0 auto', width: '800px', height: '500px' }} />
+
+                
+                <div style={{ display: 'flex', justifyContent: isPC ? 'space-between' : 'center', alignItems: 'center', flexWrap: 'wrap' }}>
+                    <div style={{flex: '1', maxWidth: isPC? '47.5%' : '100%', marginRight: isPC? '2.5%' : '10%', marginLeft: isPC ? '0%' : '-5%'}}>
+                        <figure style={{ textAlign: 'center', width: '100%', height: '100%' }}>
+                        <img src={TySimScene} alt="Tysim Scene" style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }} />
                         <figcaption style={{ marginTop: '10px' }}>Synthetically Generated Sample Image</figcaption>
-                    </figure>
-                    <figure style={{ textAlign: 'center' }}>
-                        <img src={TySimBBox} alt="Tysim BBox" style={{ display: 'block', margin: '0 auto', width: '800px', height: '500px' }} />
-                        <figcaption style={{ marginTop: '10px' }}>Synthetically Generated Image with GroundTruth Data BBox from Blender</figcaption>
-                    </figure>
+                        </figure>
+                    </div>
+                    <div style={{flex: '1', maxWidth: isPC? '47.5%' : '100%', marginRight: isPC? '2.5%' : '10%', marginLeft: isPC ? '0%' : '-5%'}}>
+                        <figure style={{ textAlign: 'center', width: '100%', height: '100%' }}>
+                        <img src={TySimBBox} alt="Tysim BBox" style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <figcaption style={{ marginTop: '10px' }}>Blender's GroundTruth BBox Data</figcaption>
+                        </figure>
+                    </div>
                 </div>
+
+
                 
             </Typography>
         </>

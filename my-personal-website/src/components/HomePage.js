@@ -8,6 +8,10 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import TracerouteComponent from './TraceRouteComponent';
 // Icons
 import PinDropRoundedIcon from '@mui/icons-material/PinDropRounded';
 import BadgeRoundedIcon from '@mui/icons-material/BadgeRounded';
@@ -19,15 +23,19 @@ import profileImage from '../images/personal_photo.jpg';
 import { fontFamily } from '@mui/system';
 
 export default function HomePage() {
+    
+    // const isPC = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+    const isPC = useMediaQuery('(min-width:500px)')
     return (
     <>
-    {/* <Box sx={{position: 'absolute', flex: '1', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', background:"rgb(255, 255, 255)"}}> */}
-    
-        <Stack direction="row" justifyContent="center" alignItems="center" spacing={1} sx={{position: 'absolute', flex: '1', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}}>
+    {/* <TracerouteComponent /> */}
+    {/* , top: '50%', left: '50%', transform: 'translate(-50%, -50%)' */}
+        <Stack direction={isPC ? 'row' : 'row'} justifyContent="center" alignItems="center" spacing={1} sx={{position: 'absolute', flex: '1'}}>
             <div>
-                <Typography variant="h3" style={{ color: 'rgb(24, 24, 24)', fontFamily: 'Monospace', marginLeft: 15}}> <b>Karthik Ganesan </b></Typography>
+            {/* <div style={{ marginBottom: isPC ? 0 : '20px', textAlign: isPC ? 'left' : 'center' }}> */}
+                <Typography variant="h3" style={{ color: 'rgb(24, 24, 24)', fontFamily: 'Monospace', marginLeft: '15%', marginTop: '10%'}}> <b>Karthik Ganesan </b></Typography>
                 <ListItem alignItems="center">
-                    <ListItemIcon sx={{ marginBottom: 1, marginRight: -2.5 }}>
+                    <ListItemIcon sx={{ marginBottom: '2%', marginRight: '-2.5%' }}>
                         <BadgeRoundedIcon />
                     </ListItemIcon>
                     <ListItemText
@@ -36,7 +44,7 @@ export default function HomePage() {
                 </ListItem>
 
                 <ListItem alignItems="center">
-                    <ListItemIcon sx={{ marginBottom: 1, marginRight: -2.5 }}>
+                    <ListItemIcon sx={{ marginBottom: '2%', marginRight: '-2.5%' }}>
                         <BusinessRoundedIcon />
                     </ListItemIcon>
                     <ListItemText
@@ -45,7 +53,7 @@ export default function HomePage() {
                 </ListItem>
 
                 <ListItem >
-                    <ListItemIcon sx={{ marginBottom: 1, marginRight: -2.5 }}>
+                    <ListItemIcon sx={{ marginBottom: '2%', marginRight: '-2.5%' }}>
                         <PinDropRoundedIcon />
                     </ListItemIcon>
                     <ListItemText
@@ -54,7 +62,7 @@ export default function HomePage() {
                 </ListItem>
 
                 <ListItem >
-                    <ListItemIcon sx={{ marginBottom: 1, marginRight: -2.5 }}>
+                    <ListItemIcon sx={{ marginBottom: '2%', marginRight: '-2.5%' }}>
                         <InfoRoundedIcon />
                     </ListItemIcon>
                     <ListItemText
@@ -63,7 +71,7 @@ export default function HomePage() {
                 </ListItem>
 
                 <ListItem >
-                    <ListItemIcon sx={{ marginBottom: 1, marginRight: -2.5 }}>
+                    <ListItemIcon sx={{ marginBottom: '2%', marginRight: '-2.5%' }}>
                         <ManageSearchRoundedIcon />
                     </ListItemIcon>
                     <ListItemText
@@ -71,9 +79,8 @@ export default function HomePage() {
                     />
                 </ListItem>
             </div>
-            <img src={profileImage} alt="Profile" style={{ width: '20%', height: '20%', justifyContent: 'flex-end', borderRadius: '10%'}} />
-         </Stack>
-      {/* </Box>      */}
-      </>
+            <img src={profileImage} alt="Profile" style={{maxWidth: '100%',  width: '20%', height: '20%', justifyContent: 'flex-end', borderRadius: '10%'}} />
+        </Stack>
+    </>
     );
   }
