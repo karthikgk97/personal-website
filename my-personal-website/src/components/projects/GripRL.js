@@ -5,10 +5,11 @@ import BuildCircleRoundedIcon from '@mui/icons-material/BuildCircleRounded';
 import ContentPasteRoundedIcon from '@mui/icons-material/ContentPasteRounded';
 import ListRoundedIcon from '@mui/icons-material/ListRounded';
 import PrecisionManufacturingRoundedIcon from '@mui/icons-material/PrecisionManufacturingRounded';
-
+import useMediaQuery from '@mui/material/useMediaQuery';
 import GripRLScene from '../../images/grip_rl_rl_setup.png'
 
 export default function GripRLContents() {
+    const isPC = useMediaQuery('(min-width:500px)')
     return(
         <>
             <Typography variant="h3" style={{ color: 'rgb(24, 24, 24)', fontFamily: 'Monospace', textAlign: 'center'}}>  
@@ -42,15 +43,21 @@ export default function GripRLContents() {
                     <li> <b> Synthetic Dataset Generation: </b> Nvidia Replicator was used to create a synthetic dataset of whole-body chickens. This dataset was then used to train a pose estimation model, allowing for precise localization and interaction within the simulated environment.</li>
                     <li> <b> Digital Twin Setup: </b> ROS and MoveIt were integrated with a real-world FANUC robot to create a digital-twin in simulation. The FANUC ROS Industrial Package and the ROS1_ROS2_bridge were used to facilitate communication between ROS1 and ROS2 packages within Nvidia Isaac Sim.</li>
                 </ul>
-                <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                {/* <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                     <figure style={{ textAlign: 'center' }}>
-                        <img src={GripRLScene} alt="Grip RL Scene" style={{ display: 'block', margin: '0 auto', width: '800px', height: '500px' }} />
+                        <img src={GripRLScene} alt="Grip RL Scene" style={{ display: 'block', margin: '0 auto', maxWidth: '100%', width: '800px', height: '500px' }} />
                         <figcaption style={{ marginTop: '10px' }}>RL Scene in Isaac Sim</figcaption>
                     </figure>
-                    {/* <figure style={{ textAlign: 'center' }}>
-                        <img src={TySimBBox} alt="Tysim BBox" style={{ display: 'block', margin: '0 auto', width: '800px', height: '500px' }} />
-                        <figcaption style={{ marginTop: '10px' }}>Synthetically Generated Image with GroundTruth Data BBox from Blender</figcaption>
-                    </figure> */}
+                    
+                </div> */}
+
+                <div style={{ display: 'flex', justifyContent: isPC ? 'center' : 'center', alignItems: 'center', flexWrap: 'wrap' }}>
+                    <div style={{flex: '1', maxWidth: isPC? '47.5%' : '100%', marginRight: isPC? '2.5%' : '10%', marginLeft: isPC ? '0%' : '-5%'}}>
+                        <figure style={{ textAlign: 'center', width: '100%', height: '100%' }}>
+                        <img src={GripRLScene} alt="Grip RL Scene" style={{ display: 'block', width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <figcaption style={{ marginTop: '10px' }}>RL Scene in Isaac Sim</figcaption>
+                        </figure>
+                    </div>
                 </div>
                 
             </Typography>
