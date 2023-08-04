@@ -14,13 +14,13 @@ export default function LinquaContents() {
         <br></br>
         <Typography variant="body1" style={{display: 'flex',fontFamily: 'Monospace'}}>
             <BuildCircleRoundedIcon style={{borderRadius: '50%'}}/>
-            <b> Tools Used </b>: Python, GCP, Streamlit and OpenAI. 
+            <b> Tools Used </b>: Python, GCP, Terraform, Streamlit, Docker and GitLab CI. 
         </Typography>
         <br></br>
         <Typography variant="body1" style={{display: 'flex', fontFamily: 'Monospace'}}>
             <ContentPasteRoundedIcon style={{borderRadius: '50%'}}/>
             <b> Context: </b> 
-            Project Linqua at Tyson Foods involved the development of a Chatbot that uses LLM such as gpt-3.5-turbo to write a SQL Query against GCP BigQuery Client. <br></br>
+            Project Linqua at Tyson Foods involved the development of a Chatbot that uses LLM such as OpenAI's GPT or Google's PALM2 to intelligently write a SQL Query against GCP BigQuery Client. <br></br>
         </Typography> 
 
         <br></br>    

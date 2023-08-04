@@ -67,7 +67,7 @@ export default function HomePage() {
                         <InfoRoundedIcon />
                     </ListItemIcon>
                     <ListItemText
-                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>About</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Motivated, Cross-functional Software Engineer</Typography>}
+                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>About</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Motivated, Cross-functional Developer</Typography>}
                     />
                 </ListItem>
 
