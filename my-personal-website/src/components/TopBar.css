@@ -1,0 +1,21 @@
+.top-bar {
+    background-color: #222222;
+    /* height: 40px; */
+    padding: 5px;
+}
+
+
+/* NavLink styling */
+.nav-link {
+    color: rgb(77, 77, 77); /* Change this color to your desired link color */
+    text-decoration: none;
+}
+  
+/* Active NavLink styling */
+a.active {
+color: rgb(0, 50, 120); 
+}
+
+a:hover {
+    color: rgb(0, 60, 110);
+}
