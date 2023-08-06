@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 
 import BuildCircleRoundedIcon from '@mui/icons-material/BuildCircleRounded';
 import ContentPasteRoundedIcon from '@mui/icons-material/ContentPasteRounded';
-import ListRoundedIcon from '@mui/icons-material/ListRounded';
+import AssignmentRoundedIcon from '@mui/icons-material/AssignmentRounded';
 
 export default function LinquaContents() {
     return(
@@ -12,30 +12,37 @@ export default function LinquaContents() {
             <b> LLM for SQL Query</b> 
         </Typography>
         <br></br>
-        <Typography variant="body1" style={{display: 'flex',fontFamily: 'Monospace'}}>
+        <Typography variant="body1" style={{display: 'flex',fontFamily: 'Helvetica'}}>
             <BuildCircleRoundedIcon style={{borderRadius: '50%'}}/>
-            <b> Tools Used </b>: Python, GCP, Terraform, Streamlit, Docker and GitLab CI. 
+            <b> Tools Used </b>: 
+            &nbsp;
+            <Typography variant='body1' style={{fontFamily: 'Garamond'}}>
+                Python, GCP, Terraform, Streamlit, Docker and GitLab CI. 
+            </Typography>
         </Typography>
         <br></br>
-        <Typography variant="body1" style={{display: 'flex', fontFamily: 'Monospace'}}>
+        <Typography variant="body1" style={{display: 'flex', fontFamily: 'Helvetica'}}>
             <ContentPasteRoundedIcon style={{borderRadius: '50%'}}/>
             <b> Context: </b> 
-            Project Linqua at Tyson Foods involved the development of a Chatbot that uses LLM such as OpenAI's GPT or Google's PALM2 to intelligently write a SQL Query against GCP BigQuery Client. <br></br>
+            &nbsp;
+            <Typography variant='body1' style={{fontFamily: 'Garamond'}}>
+            Project Linqua at Tyson Foods involved the development of a Chatbot that leverages LLM (such as OpenAI's GPT or Google's PALM2) to intelligently generate a SQL Query. The Chatbot then uses GCP BigQuery Client to execute the generated query and retrieve the output.<br></br>
+            </Typography>
         </Typography> 
 
         <br></br>    
         
-        <Typography variant="body1" style={{display: 'flex', fontFamily: 'Monospace'}}>
-            <ListRoundedIcon style={{borderRadius: '50%'}}/>
+        <Typography variant="body1" style={{display: 'flex', fontFamily: 'Helvetica'}}>
+            <AssignmentRoundedIcon style={{borderRadius: '50%'}}/>
             <b> Approach Taken: </b> 
         </Typography>
 
-        <Typography variant='body1' style={{fontFamily: 'Monospace'}}>
+        <Typography variant='body1' style={{fontFamily: 'Garamond'}}>
             <ul> 
-                <li> <b> Backend Setup: </b> The first step of this process involved loading the backend with dataset information. We used the SQLAlchemy library along with the BigQuery ID to store essential dataset details, such as available columns and distinct options for High Cardinality columns. </li>
-                <li> <b> GUI Setup and Deployment: </b> To provide a user-friendly interface, a Chatable front-end was developed using Streamlit. The GUI was then hosted on the GCP website by containerizing the code and deploying it as a CloudRun. In addition, a load balancer with necessary Identity-Aware Proxy (IAP) permissions and SSL certificate for HTTPS was set up, ensuring secure and reliable access to the application.</li>
-                <li> <b> OpenAI API Setup: </b> The Chatbot's functionality relied on a sequential approach with multiple API calls. First, we used LLM to identify the closest columns to the user's question. Then, based on those columns, we found the closest distinct options using another API call. Next, we generated an SQL query incorporating all this information. </li>
-                <li> <b> Prompt Engineering and Chat History setup: </b> The final step involved optimizing prompts and setting up a sequential approach for the LLM. We also implemented retry handlers with chat history tracking to overcome potential timeout and output format issues.</li>
+                <li> <b> Backend Setup: </b> Dataset information was loaded into the memory using SQLAlchemy library and BigQuery ID. Essential details like available columns and distinct options for High Cardinality columns were stored. </li>
+                <li> <b> GUI Setup and Deployment: </b> A user-friendly Chatable front-end was developed using Streamlit. The GUI was containerized and deployed as a CloudRun on GCP. A load balancer with Identity-Aware Proxy (IAP) permissions and SSL certificate for HTTPS was set up for secure access. </li>
+                <li> <b> OpenAI API Setup: </b> The Chatbot's functionality relied on a sequential approach with multiple API calls. Initially, LLM identified the closest columns to the user's question. Subsequently, based on those columns, we discovered the closest distinct options through another API call. Finally, an SQL query was generated, incorporating all this information.</li>
+                <li> <b> Prompt Engineering and Chat History setup: </b> The last step involved optimizing prompts and implementing retry handlers with chat history tracking to address potential timeout and output format issues. </li>
             </ul>
 
         </Typography>

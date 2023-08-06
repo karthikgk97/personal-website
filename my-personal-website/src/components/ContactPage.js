@@ -33,10 +33,10 @@ export default function ContactPage() {
     }
     
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '90vh' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '90vh'}}>
 
-        <Typography variant="h4" style={{fontFamily: 'monospace' }}> <b>Website's System Architecture:</b></Typography>
-        <Typography variant="body1" style={{fontFamily: 'monospace' }}> The website is currently hosted on a local (old) laptop, which functions as a personal server. The DNS resolution and network connectivity are managed using Tailscale.</Typography>
+        <Typography variant="h4" style={{fontFamily: 'Monospace' }}> <b>Website's Infrastructure:</b></Typography>
+        <Typography variant="body1" style={{fontFamily: 'Garamond' }}> The website is currently hosted on a local (old) laptop, which functions as a personal server. The DNS resolution and network connectivity are managed using Tailscale.</Typography>
         <div style={{ display: 'flex', justifyContent: isPC ? 'center' : 'center', alignItems: 'center', flexWrap: 'wrap' }}>
             <div style={{flex: '1', maxWidth: isPC? '50%' : '100%', marginRight: isPC? '2.5%' : '10%', marginLeft: isPC ? '0%' : '-5%'}}>
                 <figure style={{ textAlign: 'center', width: '100%', height: '100%' }}>
@@ -46,7 +46,7 @@ export default function ContactPage() {
             </div>
         </div>
         
-        <Typography variant="h4" style={{fontFamily: 'monospace', marginTop: '2.5%' }}> <b>Contact:</b></Typography>
+        <Typography variant="h4" style={{fontFamily: 'Monospace', marginTop: '2.5%' }}> <b>Contact:</b></Typography>
 
         <Tooltip title="Download Karthik's Resume" arrow>
             <Button variant="contained" color="primary" onClick={handleDownload} style={{ marginTop: '1.5%' }}>

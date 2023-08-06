@@ -3,8 +3,7 @@ import Typography from '@mui/material/Typography';
 
 import BuildCircleRoundedIcon from '@mui/icons-material/BuildCircleRounded';
 import ContentPasteRoundedIcon from '@mui/icons-material/ContentPasteRounded';
-import ListRoundedIcon from '@mui/icons-material/ListRounded';
-import PrecisionManufacturingRoundedIcon from '@mui/icons-material/PrecisionManufacturingRounded';
+import AssignmentRoundedIcon from '@mui/icons-material/AssignmentRounded';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import GripRLScene from '../../images/grip_rl_rl_setup.png'
 
@@ -16,32 +15,39 @@ export default function GripRLContents() {
                 <b>Grip Identification with Reinforcement Learning</b> 
             </Typography>
             <br></br>
-            <Typography variant="body1" style={{display: 'flex',fontFamily: 'Monospace'}}>
+            <Typography variant="body1" style={{display: 'flex',fontFamily: 'Helvetica'}}>
                 <BuildCircleRoundedIcon style={{borderRadius: '50%'}}/>
-                <b> Tools Used </b>: Nvidia Omniverse, Python, Robot Operating System (ROS), MoveIt, C++, AWS, Docker, GitLab CI. 
+                <b> Tools Used </b>: 
+                &nbsp;
+                <Typography variant='body1' style={{fontFamily: 'Garamond'}}>
+                    Nvidia Omniverse, Python, Robot Operating System (ROS), MoveIt, C++, AWS, Docker, GitLab CI. 
+                </Typography>
             </Typography>
             <br></br>
-            <Typography variant="body1" style={{display: 'flex', fontFamily: 'Monospace'}}>
+            <Typography variant="body1" style={{display: 'flex', fontFamily: 'Helvetica'}}>
                 <ContentPasteRoundedIcon style={{borderRadius: '50%'}}/>
-                <b> Context: </b> 
-                Project Grip-RL was Tyson's attempt at establishing Simulation-First Workflow across the company. The primary objective was to validate the reliability and accuracy of simulation testing and explore the potential of performing Reinforcement Learning in a simulated environment.
+                <b> Context: </b>
+                &nbsp;
+                <Typography variant='body1' style={{fontFamily: 'Garamond'}}>
+                    Project Grip-RL represented Tyson Foods' initiative to implement a Simulation-First Workflow company-wide. The primary goal was to validate the reliability and accuracy of simulation testing and explore the potential of Reinforcement Learning (RL) within a simulated environment.
+                </Typography>
                 <br></br>
             </Typography> 
 
             <br></br>    
             
-            <Typography variant="body1" style={{display: 'flex', fontFamily: 'Monospace'}}>
-                <ListRoundedIcon style={{borderRadius: '50%'}}/>
+            <Typography variant="body1" style={{display: 'flex', fontFamily: 'Helvetica'}}>
+                <AssignmentRoundedIcon style={{borderRadius: '50%'}}/>
                 <b> Approach Taken: </b> 
             </Typography>
 
-            <Typography variant='body1' style={{fontFamily: 'Monospace'}}>
+            <Typography variant='body1' style={{fontFamily: 'Garamond'}}>
                 <ul>
-                    <li> <b> Scene Setup: </b>The project involved setting up a scene that included various elements like robots, end effectors, conveyor belts, and chickens. All these elements were represented as 3D assets in the Universal Scene Description (USD) file format. This format allowed us to easily scale and manipulate the assets, taking advantage of the concept of "Instanceable Assets"</li>
-                    <li> <b> Reinforcement Learning Loop: </b> The project utilizes Isaac Sim API and Proximal Policy Optimization (PPO) algorithm to establish a reinforcement learning loop. Leveraging OmniIsaacGym Framework, we were able to deploy 256 unique environments for RL training. </li>
-                    <li> <b> Reward Engineering:</b> Reward Engineering was employed to guide the robot in reaching and grasping the target using its grippers. The robot was rewarded for correct actions such as getting closer to the target, aligning the grippers with the target position, and successfully grasping the target. Conversely, it was penalized for incorrect actions such as moving farther away from the target or colliding with other objects in the surrounding space.</li>
-                    <li> <b> Synthetic Dataset Generation: </b> Nvidia Replicator was used to create a synthetic dataset of whole-body chickens. This dataset was then used to train a pose estimation model, allowing for precise localization and interaction within the simulated environment.</li>
-                    <li> <b> Digital Twin Setup: </b> ROS and MoveIt were integrated with a real-world FANUC robot to create a digital-twin in simulation. The FANUC ROS Industrial Package and the ROS1_ROS2_bridge were used to facilitate communication between ROS1 and ROS2 packages within Nvidia Isaac Sim.</li>
+                    <li> <b> Scene Setup: </b> The project involved configuring a scene with robots, end effectors, conveyor belts, and chickens as 3D assets in the Universal Scene Description (USD) file format. The use of "Instanceable Assets" allowed easy scaling and manipulation of these elements. </li>
+                    <li> <b> Reinforcement Learning Loop: </b> Isaac Sim API and Proximal Policy Optimization (PPO) algorithm were employed to establish a reinforcement learning loop. The OmniIsaacGym Framework facilitated the deployment of 512 unique environments for RL training. </li>
+                    <li> <b> Reward Engineering:</b> To guide the robot in reaching and grasping the target with its grippers, reward engineering was applied. Correct actions, such as getting closer to the target, aligning the grippers accurately, and successful grasping, were rewarded. Conversely, incorrect actions, like moving away from the target or colliding with other objects, were penalized.</li>
+                    <li> <b> Synthetic Dataset Generation: </b> Nvidia Replicator was utilized to generate a synthetic dataset of whole-body chickens. This dataset enabled the training of a pose estimation model, ensuring precise localization and interaction within the simulated environment.</li>
+                    <li> <b> Digital Twin Setup: </b> ROS and MoveIt were integrated with a real-world FANUC robot to create a digital-twin in simulation. The FANUC ROS Industrial Package and the ROS1_ROS2_bridge facilitated communication between ROS1 and ROS2 packages within Nvidia Isaac Sim. </li>
                 </ul>
                 {/* <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                     <figure style={{ textAlign: 'center' }}>

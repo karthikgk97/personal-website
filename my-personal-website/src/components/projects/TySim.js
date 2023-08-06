@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 
 import BuildCircleRoundedIcon from '@mui/icons-material/BuildCircleRounded';
 import ContentPasteRoundedIcon from '@mui/icons-material/ContentPasteRounded';
-import ListRoundedIcon from '@mui/icons-material/ListRounded';
+import AssignmentRoundedIcon from '@mui/icons-material/AssignmentRounded';
 
 import TySimScene from '../../images/tysim_simulated_scene.png'
 import TySimBBox from '../../images/tysim_with_bbox.png';
@@ -19,31 +19,39 @@ export default function TySimContents() {
                 <b>Synthetic Data Generation</b> 
             </Typography>
             <br></br>
-            <Typography variant="body1" style={{display: 'flex',fontFamily: 'Monospace'}}>
+            <Typography variant="body1" style={{display: 'flex',fontFamily: 'Helvetica'}}>
                 <BuildCircleRoundedIcon style={{borderRadius: '50%'}}/>
-                <b> Tools Used </b>: AWS, Python, Blender, Docker, GitLab CI, ML using MxNET, TensorFlow and PyTorch. 
+                <b> Tools Used </b>: 
+                &nbsp;
+                <Typography variant='body1' style={{fontFamily: 'Garamond'}}>
+                    AWS, Python, Blender, Docker, GitLab CI, ML using MxNET, TensorFlow and PyTorch.
+                </Typography> 
             </Typography>
             <br></br>
-            <Typography variant="body1" style={{display: 'flex', fontFamily: 'Monospace'}}>
+
+            <Typography variant="body1" style={{display: 'flex', fontFamily: 'Helvetica'}}>
                 <ContentPasteRoundedIcon style={{borderRadius: '50%'}}/>
-                <b> Context: </b> 
-                Project TySim was Tyson Foods' first attempt at generating synthetic images of chicken nuggets and training a model using them. The project was initiated due to the challenges faced in collecting real-world images of chicken nuggets, which often suffered from frequent fogging of the camera lens. Furthermore, annotating these images proved to be a strenuous task. <br></br>
+                <b> Context: </b>
+                &nbsp;
+                <Typography variant='body1' style={{fontFamily: 'Garamond'}}>
+                    Project TySim represented Tyson Foods' initial effort to create synthetic images of chicken nuggets and utilize them for model training. This decision was driven by the difficulties encountered in collecting real-world images of chicken nuggets, which were often affected by camera lens fogging, leading to a labor-intensive image annotation process. <br></br>
+                </Typography>
             </Typography> 
 
             <br></br>    
             
-            <Typography variant="body1" style={{display: 'flex', fontFamily: 'Monospace'}}>
-                <ListRoundedIcon style={{borderRadius: '50%'}}/>
+            <Typography variant="body1" style={{display: 'flex', fontFamily: 'Helvetica'}}>
+                <AssignmentRoundedIcon style={{borderRadius: '50%'}}/>
                 <b> Approach Taken: </b> 
             </Typography>
 
-            <Typography variant='body1' style={{fontFamily: 'Monospace'}}>
+            <Typography variant='body1' style={{fontFamily: 'Garamond'}}>
                 <ul>
-                    <li> <b>Image Generation:</b> The project started by leveraging Blender's Python API to generate synthetic images. A carefully designed 3D model served as the foundation, and Materialize software was employed to generate Physically Based Rendering (PBR) materials. </li>
-                    <li> <b>Deployment on AWS:</b> The generated image generation code was dockerized and seamlessly deployed to AWS ECR (Elastic Container Registry) through GitLab CI (Continuous Integration). This streamlined the process and facilitated further automation.</li>
-                    <li> <b>Cloud Pipeline:</b> Leveraging the power of AWS services, a cloud pipeline was established. AWS Lambda effectively triggered an AWS Batch job, incorporating the ECR image. The resulting output images were efficiently stored in AWS S3. </li>
-                    <li> <b>Transfer Learning and Model Training:</b> With the synthetic dataset in hand, the team undertook transfer learning to train an object detection model. The achieved accuracy across all classes, distinguishing between good and defective nuggets, reached approximately 70%. This outperformed the model trained solely on real-world images, which exhibited an accuracy of around 40%. </li>
-                    <li> <b>Framework and Training:</b> AWS Sagemaker played a crucial role in training the models. The team utilized three different frameworks - MxNET, TensorFlow, and PyTorch - to train separate models. Leveraging Sagemaker's distributed training capabilities, particularly in PyTorch, resulted in a 50% reduction in overall training time.</li>
+                    <li> <b>Image Generation:</b> Blender's Python API was leveraged to create synthetic images. A meticulously designed 3D model formed the base, and Materialize software produced Physically Based Rendering (PBR) materials. </li>
+                    <li> <b>Deployment on AWS:</b> The image generation code was dockerized and deployed to AWS ECR (Elastic Container Registry) via GitLab CI (Continuous Integration), streamlining the process and enabling automation.</li>
+                    <li> <b>Cloud Pipeline:</b> The entire cloud pipeline was orchestrated using AWS services. Initially, an AWS Lambda function triggered an AWS Batch job, leveraging the ECR image, and stored the output images in AWS S3. Additionally, a record was written to DynamoDB to track the run.  </li>
+                    <li> <b>Transfer Learning and Model Training:</b> With the synthetic dataset, transfer learning was employed to train an object detection model. The achieved accuracy, distinguishing between good and defective nuggets, reached around 70%, surpassing the model trained solely on real-world images, which achieved approximately 40% accuracy. </li>
+                    <li> <b>Framework and Training:</b> AWS Sagemaker played a pivotal role in model training. MxNET, TensorFlow, and PyTorch were used to train separate models. Leveraging Sagemaker's distributed training capabilities, particularly in PyTorch, led to a 50% reduction in overall training time. </li>
                     
                 </ul>
 

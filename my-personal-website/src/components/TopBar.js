@@ -2,11 +2,8 @@ import React from 'react';
 import './TopBar.css';
 
 import Stack from '@mui/material/Stack';
-// import Link from '@mui/material/Link';
 import Tooltip from '@mui/material/Tooltip';
 
-import Avatar from '@mui/material/Avatar';
-import personalPhoto from '../images/avatar_photo.png';
 
 import { NavLink } from 'react-router-dom';
 
@@ -15,8 +12,6 @@ import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 import WorkHistoryRoundedIcon from '@mui/icons-material/WorkHistoryRounded';
 import ContactMailRoundedIcon from '@mui/icons-material/ContactMailRounded';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-import EngineeringRoundedIcon from '@mui/icons-material/EngineeringRounded';
-
 
 export default function TopBar() {
     

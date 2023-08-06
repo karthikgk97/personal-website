@@ -18,8 +18,6 @@ import GoChartContents from './projects/GoChart';
 import KeyboardArrowDownIcon from 
     "@mui/icons-material/KeyboardArrowDown";
 
-// import ExpandCircleDownRoundedIcon from '@mui/icons-material/ExpandCircleDownRounded';
-import ExpandCircleDownOutlinedIcon from '@mui/icons-material/ExpandCircleDownOutlined';
 import KeyboardArrowUpIcon from 
     "@mui/icons-material/KeyboardArrowUp";
 import IconButton from "@mui/material/IconButton";
@@ -152,7 +150,7 @@ export default function WorkPage() {
             <div onClick={() => setBroctOpen(!broctOpen)} style={{ cursor: 'pointer'}}>
             <CardHeader
                     title= {<Typography variant="h5" style={{display: 'flex', fontFamily: 'Monospace'}}> <b>Project BROCT</b> </Typography>}
-                    avatar = {<Avatar alt="Duke University" variant="circular" sizes="large" src={duke_univ_logo}/>}
+                    avatar = {<Avatar alt="Duke" variant="circular" sizes="large" src={duke_univ_logo} style={{border: '0.1px solid lightgray'}}/>}
                     action={ 
                         <IconButton
                             onClick={() => setBroctOpen(!broctOpen)}
@@ -186,7 +184,8 @@ export default function WorkPage() {
             <div onClick={() => setGoChartOpen(!goChartOpen)} style={{ cursor: 'pointer'}}>
             <CardHeader
                     title= {<Typography variant="h5" style={{display: 'flex', fontFamily: 'Monospace'}}> <b>Project Go-CHART</b> </Typography>}
-                    avatar = {<Avatar alt="ASU" variant="circular" sizes="large" src={asu_logo}/>}
+                    avatar = {<Avatar alt="ASU" variant="circular" sizes="large" src={asu_logo} style={{border: '0.1px solid lightgray'}}/>}
+
                     action={ 
                         <IconButton
                             onClick={() => setGoChartOpen(!goChartOpen)}

@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 
 import BuildCircleRoundedIcon from '@mui/icons-material/BuildCircleRounded';
 import ContentPasteRoundedIcon from '@mui/icons-material/ContentPasteRounded';
-import ListRoundedIcon from '@mui/icons-material/ListRounded';
+import AssignmentRoundedIcon from '@mui/icons-material/AssignmentRounded';
 
 export default function GoChartContents() {
     return(
@@ -12,29 +12,36 @@ export default function GoChartContents() {
             <b> Middleware for Robot</b> 
         </Typography>
         <br></br>
-        <Typography variant="body1" style={{display: 'flex',fontFamily: 'Monospace'}}>
+        <Typography variant="body1" style={{display: 'flex',fontFamily: 'Helvetica'}}>
             <BuildCircleRoundedIcon style={{borderRadius: '50%'}}/>
-            <b> Tools Used </b>: C++, Python, Qt Designer, ROS and ML. 
+            <b> Tools Used </b>:
+            &nbsp;
+            <Typography variant='body1' style={{fontFamily: 'Garamond'}}>
+                C++, Python, Qt Designer, ROS and ML. 
+            </Typography> 
         </Typography>
         <br></br>
-        <Typography variant="body1" style={{display: 'flex', fontFamily: 'Monospace'}}>
+        <Typography variant="body1" style={{display: 'flex', fontFamily: 'Helvetica'}}>
             <ContentPasteRoundedIcon style={{borderRadius: '50%'}}/>
             <b> Context: </b> 
-            Project Go-CHART at Arizona State University involved the development of a middleware for an inbuilt lab robot using Robot Operating System (ROS). The project also involved setting up GUI for the robot's camera sensors and training an ML model to detect objects that are specific to our lab's in built physical testbed. <br></br>
+            &nbsp;
+            <Typography variant='body1' style={{fontFamily: 'Garamond'}}>
+                Project Go-CHART at Arizona State University was centered around an inbuilt lab robot, where my role was to aid a PhD student in setting up ROS for real-time sensor data retrieval and assisting with object detection tasks. <br></br>
+            </Typography>
         </Typography> 
 
         <br></br>    
         
-        <Typography variant="body1" style={{display: 'flex', fontFamily: 'Monospace'}}>
-            <ListRoundedIcon style={{borderRadius: '50%'}}/>
+        <Typography variant="body1" style={{display: 'flex', fontFamily: 'Helvetica'}}>
+            <AssignmentRoundedIcon style={{borderRadius: '50%'}}/>
             <b> Approach Taken: </b> 
         </Typography>
 
-        <Typography variant='body1' style={{fontFamily: 'Monospace'}}>
+        <Typography variant='body1' style={{fontFamily: 'Garamond'}}>
             <ul>
-                <li> <b> GUI Setup: </b> The initial steps involved setting up static IP address to the robot's camera sensors which were connected by individual Raspberry Pi zeros. Once the IPs were set, a GUI was built to view real-time sensor data using Qt Designer and Python </li>
-                <li> <b> Middleware Setup: </b> The majority of the work in this project involved setting up middleware for the robot. The in-house built lab robot contains many sensors, such as Ultrasonic sensor, LiDAR sensor, motor drivers, LDR sensor, etc. These sensors were all connected to a micro-controller. A middleware was created using C++ and ROS1 Kinetic to establish real-time sensor data retrieval and transmission between the Master Node (the laptop or main computer) and the robot. </li>
-                <li> <b> ML Training: </b> The next and final step of this project involved collecting and annotating vehicles and other objects present in the in-house built physical testbed. The goal was to perform transfer learning to train an ML model, specifically YOLOv3 in this case, capable of identifying objects with higher accuracy. To achieve better prediction results, the dataset was gathered using the primary camera of the robot. </li>
+                <li> <b> GUI Setup: </b> Initially, static IP addresses were assigned to the robot's camera sensors, connected to individual Raspberry Pi zeros. Using Qt Designer and Python, a real-time sensor data GUI was created for viewing. </li>
+                <li> <b> Middleware Setup: </b> The core of the project involved establishing middleware for the robot. Various sensors, such as Ultrasonic, LiDAR, motor drivers, and LDR, were connected to a micro-controller. C++ and ROS1 Kinetic were used to build the middleware, facilitating real-time sensor data retrieval and transmission between the Master Node and the robot. </li>
+                <li> <b> ML Training: </b> The final step involved collecting and annotating vehicles and other objects in the inbuilt physical testbed. Transfer learning was performed to train an ML model, specifically YOLOv3, for accurate object detection. The primary camera of the robot was utilized to gather the dataset, resulting in improved prediction results. </li>
             </ul>
 
         </Typography>

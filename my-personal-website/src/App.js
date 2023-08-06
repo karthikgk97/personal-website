@@ -6,8 +6,6 @@ import QualificationsPage from './components/QualificationsPage';
 import WorkPage from './components/WorkPage';
 import ContactPage from './components/ContactPage';
 
-import CoPresentRoundedIcon from '@mui/icons-material/CoPresentRounded';
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 export default function MyApp() {
