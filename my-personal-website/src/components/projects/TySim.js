@@ -14,7 +14,8 @@ export default function TySimContents() {
 
     return(
 
-        <>
+        // <>
+        <div style={{ background: '#dedcdc', padding: '20px', marginTop: '-15px', marginBottom: '-15px', marginLeft: '-5px', marginRight: '-5px', borderRadius: '12px' }}>
             <Typography variant="h3" style={{ color: 'rgb(24, 24, 24)', fontFamily: 'Monospace', textAlign: 'center'}}>  
                 <b>Synthetic Data Generation</b> 
             </Typography>
@@ -74,7 +75,8 @@ export default function TySimContents() {
 
                 
             </Typography>
-        </>
+        {/* </> */}
+        </div>
     );
 }
 
