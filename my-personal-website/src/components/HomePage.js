@@ -19,6 +19,7 @@ import profileImage from '../images/personal_photo.jpg';
 export default function HomePage() {
     
     return (
+        
     <>
     {/* <TracerouteComponent /> */}
     {/* , top: '50%', left: '50%', transform: 'translate(-50%, -50%)' */}
@@ -67,7 +68,7 @@ export default function HomePage() {
                         <ManageSearchRoundedIcon />
                     </ListItemIcon>
                     <ListItemText
-                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>Key Skills</b>&nbsp;: Python, AWS, GCP, Robotics</Typography>}
+                        primary={<Typography variant="body1" style={{ color: 'rgb(75, 75, 75)', fontFamily: 'monospace' }}> <b>Key Skills</b>&nbsp;: Python, AWS, GCP, LLM, Robotics, Rust</Typography>}
                     />
                 </ListItem>
             </div>

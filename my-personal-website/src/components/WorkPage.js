@@ -70,11 +70,7 @@ export default function WorkPage() {
             </>
         </Card>  
 
-
-
-        {/* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>  */}
         <Card sx={{ borderRadius: 0 }} style={{marginTop: '-1px'}}>
-            {/* <div onClick={() => setTySimOpen(!tysimOpen)} style={{ cursor: 'pointer', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center'}}> */}
             <div onClick={() => setTySimOpen(!tysimOpen)} style={{ cursor: 'pointer'}}>
             <CardHeader
                     title= {<Typography variant="h5" style={{display: 'flex', fontFamily: 'Monospace'}}> <b>Project TySim</b> </Typography>}
@@ -104,14 +100,8 @@ export default function WorkPage() {
                 </Collapse>
             </>
         </Card>  
-        {/* </div>   */}
 
-
-
-
-        {/* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>            */}
         <Card sx={{ borderRadius: 0 }} style={{marginTop: '-1px'}}>
-            {/* <div onClick={() => setGripRLOpen(!gripRLOpen)} style={{ cursor: 'pointer', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center'}}> */}
             <div onClick={() => setGripRLOpen(!gripRLOpen)} style={{ cursor: 'pointer'}}>
             <CardHeader
                     title= {<Typography variant="h5" style={{display: 'flex', fontFamily: 'Monospace'}}> <b>Project Grip-RL</b> </Typography>}
@@ -141,8 +131,6 @@ export default function WorkPage() {
                 </Collapse>
             </>
         </Card>  
-        {/* </div>    */}
-
 
         {/* Duke Contents */}
 
@@ -177,10 +165,7 @@ export default function WorkPage() {
         </Card>  
 
         {/* Go Chart Contents */}
-
-        {/* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center',marginTop: '-1px'}}>            */}
         <Card sx={{ borderRadius: 0 }} style={{marginTop: '-1px'}}  >
-            {/* <div onClick={() => setGoChartOpen(!goChartOpen)} style={{ cursor: 'pointer', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center'}}> */}
             <div onClick={() => setGoChartOpen(!goChartOpen)} style={{ cursor: 'pointer'}}>
             <CardHeader
                     title= {<Typography variant="h5" style={{display: 'flex', fontFamily: 'Monospace'}}> <b>Project Go-CHART</b> </Typography>}
@@ -210,7 +195,6 @@ export default function WorkPage() {
                 </Collapse>
             </>
         </Card>  
-        {/* </div>   */}
 
         </Stack>
         </>

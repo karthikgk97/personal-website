@@ -7,7 +7,7 @@ import AssignmentRoundedIcon from '@mui/icons-material/AssignmentRounded';
 
 export default function LinquaContents() {
     return(
-        <>
+        <div style={{ background: '#dedcdc', padding: '20px', marginTop: '-15px', marginBottom: '-15px', marginLeft: '-5px', marginRight: '-5px', borderRadius: '12px' }}>
         <Typography variant="h3" style={{ color: 'rgb(24, 24, 24)', fontFamily: 'Monospace', textAlign: 'center'}}>  
             <b> LLM for SQL Query</b> 
         </Typography>
@@ -46,6 +46,6 @@ export default function LinquaContents() {
             </ul>
 
         </Typography>
-        </>
+        </div>
     );
 }
